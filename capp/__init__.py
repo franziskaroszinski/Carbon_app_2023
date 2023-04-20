@@ -8,9 +8,9 @@ application = Flask(__name__)
 
 ### Code GitHub
 application.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
-DBVAR=os.environ['DATABASE_URL']
-# DBVAR="postgresql://kofmrclyudwfjm:dcf74dea085e0d59"
-DBVAR="postgresql://username:password@host:port/database"
+# DBVAR=os.environ['DATABASE_URL']
+DBVAR="postgresql://kofmrclyudwfjm:dcf74dea085e0d592f2429a74ad0b91ff2a9cd0d543966dfcdcbec1b103e9532@ec2-34-241-82-91.eu-west-1.compute.amazonaws.com:5432/dalivs7lr982t9"
+# DBVAR="postgresql://username:password@host:port/database"
 application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR 
 application.config['SQLALCHEMY_BINDS'] ={'transport': DBVAR}
 
